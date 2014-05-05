@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'tesla-api-objectivec'
-  spec.version = '1.0'
+  spec.version = '1'
   spec.summary = 'Objective-C Wrapper For Tesla Model S APIs'
   spec.homepage = 'https://github.com/tflack/tesla-api-objectivec'
   spec.license = 'BSD'
