@@ -10,7 +10,6 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "AFHTTPRequestOperation.h"
 #import "AFURLResponseSerialization.h"
-#import "AFNetworkActivityIndicatorManager.h"
 
 @implementation TeslaApi
 
