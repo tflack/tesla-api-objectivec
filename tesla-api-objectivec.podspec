@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.license = 'BSD'
   spec.author = { 'Tim Flack' => 'tflack@idynomite.com' }
   spec.source = { :git => 'https://github.com/tflack/tesla-api-objectivec.git',
-                 :commit => '22eec7a' }
+                 :tag => 'v1' }
 
   spec.source_files = 'teslaapitest/TeslaApi.{h,m}'
   spec.requires_arc = true
