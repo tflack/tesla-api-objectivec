@@ -8,7 +8,7 @@ Install using cocoapods
 
 Include the following in your Podfile
 
-pod 'tesla-api-objectivec'
+pod 'TeslaApiObjectiveCWrapper'
 
 In Your Project
 ====================
