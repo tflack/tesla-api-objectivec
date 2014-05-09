@@ -7,6 +7,9 @@
 //
 
 #import "TeslaApi.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "AFHTTPRequestOperation.h"
+#import "AFURLResponseSerialization.h"
 
 @implementation TeslaApi
 
