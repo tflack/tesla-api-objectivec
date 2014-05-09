@@ -31,7 +31,12 @@
 	}
 */
     
-    tApi = [[TeslaApi alloc]initWithUserName:@"YOUREMAIL" andPassword:@"YOURPASSWORD"];
+    tApi = [[TeslaApi alloc] init];
+	[tApi doLoginWithUserName:@"TESLAEMAIL" andPassword:@"TESLAPASSWORD" andCompletionBlock:^(NSArray *vehicles) {
+		NSLog(@"Logged In %@",vehicles);
+	} andErrorBlock:^(NSError *error) {
+		NSLog(@"Log In Error %@",error);
+	}];
 }
 
 - (IBAction)chargeStateTouched:(id)sender {

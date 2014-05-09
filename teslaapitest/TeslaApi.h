@@ -8,19 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@class AFHTTPRequestOperationManager;
-
 @interface TeslaApi : NSObject {
-    @public
-	NSInteger vehicleId;
     AFHTTPRequestOperationManager *manager;
     NSString *baseUrl;
     BOOL loggedIn;
 }
 
--(id)initWithUserName:(NSString *)userName andPassword:(NSString *)password;
+@property (strong, nonatomic) NSNumber *vehicleId;
 
+-(BOOL)hasValidCredentialCookie;
+-(void)doLoginWithUserName:(NSString *)userName andPassword:(NSString *)password andCompletionBlock:(void(^)(NSArray *))blkCompletion andErrorBlock:(void(^)(NSError *))blkError;
 -(void)listVehiclesWithCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
+-(void)vehicleTelemetryStatusWithCompletionBlock:(void(^)(NSString *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
+-(void)wakeUpWithCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
 -(void)chargeStateWithCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
 -(void)statusWithCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
 -(void)climateStateWithCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
@@ -39,5 +39,5 @@
 -(void)autoConditioningStartWithCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
 -(void)autoConditioningStopWithCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
 -(void)sunRoofControl:(NSString *)state  withCompletionBlock:(void(^)(NSArray *))completionBlock andErrorBlock:(void(^)(NSError *))blkError;
-
+-(void)unlink;
 @end
