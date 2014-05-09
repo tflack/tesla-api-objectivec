@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class AFHTTPRequestOperationManager;
+
 @interface TeslaApi : NSObject {
+    @public
     AFHTTPRequestOperationManager *manager;
     NSString *baseUrl;
     BOOL loggedIn;
